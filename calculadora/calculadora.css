@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: orange;
+}
+h1 {
+  text-align: center;
+  margin-top: 10vh;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 12vh;
+}
+.corpo {
+  width: 100%;
+  height: 87vh;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.calculadora {
+  background-color: orange;
+  width: 30vh;
+}
+.display {
+  width: 100%;
+  font-size: 25px;
+  height: 7vh;
+  outline: 0;
+  background-color: white;
+  border: 4px solid;
+  border-color: rgba(128, 128, 128, 0.13);
+}
+.line {
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+}
+button {
+  flex: 1;
+  height: 5vh;
+}
+a{
+  display: flex;
+  flex: 1;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.856);
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 7vh;
+  border: 2px solid;
+  border-color: rgba(128, 128, 128, 0.13);
+}
+.numero {
+  background-color: white;
+}

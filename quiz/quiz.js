@@ -64,7 +64,6 @@ function submit(){
   } else {
     pos++;
   }
-  console.log(points);
   if (pos < listaSets.length){
     document.querySelector("h2").innerHTML = listaSets[pos].question;
     for (let attOpt = 0; attOpt < quantidadeOpt; attOpt++){
@@ -78,7 +77,6 @@ function submit(){
 }
 
 function stop(points){
-  console.log("parei");
   let corpo = document.querySelector(".corpo");
   let child1 = document.querySelector(".pergunta");
   let child2 = document.querySelector(".respostas");

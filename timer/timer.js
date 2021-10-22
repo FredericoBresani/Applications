@@ -33,7 +33,7 @@ function timer(){
                 if (minutos == 0){
                     horas--;
                     minutos = 59;
-                    segundos
+                    segundos = 59;
                 } else {
                     minutos--;
                     segundos = 59;
@@ -45,14 +45,10 @@ function timer(){
             document.querySelectorAll(".m p")[1].innerHTML = ("00" + minutos).slice(-2);
             document.querySelectorAll(".h p")[1].innerHTML = ("00" + horas).slice(-2);
         }
-        
-    
-
-    }, 100)
+    }, 1000)
 }
 function stop(){
     if(intervalId){
-        console.log("Entrei aqui");
         clearInterval(intervalId);
     }
 }

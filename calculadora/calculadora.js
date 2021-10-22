@@ -29,7 +29,6 @@ const resultado = function result (){
       if (display.charAt(x) == "+" || display.charAt(x) == "-" || display.charAt(x) == "*" || display.charAt(x) == "/"){
         operacao = true;
         operador = display.charAt(x);
-        console.log(operador)
         for (var z = 0; z < x; z++){
           if (display.charAt(z) == ","){
             numeroUm = numeroUm + ".";
@@ -37,7 +36,6 @@ const resultado = function result (){
             numeroUm = numeroUm + display.charAt(z);
           }
           n1 = parseFloat(numeroUm);
-          console.log(n1);
         }
         for (var y = z + 1; y < tamanho; y++){
           if (display.charAt(y) == ","){
@@ -79,9 +77,6 @@ const resultado = function result (){
       valor = parseFloat(numeroUm);
     }
     verifica = true;
-    console.log(n1);
-    console.log(n2);
-    console.log(this.innerHTML);
     if ( this.innerHTML == "√n"){
       valor = Math.pow(valor, 0.5);
     }
@@ -99,12 +94,9 @@ const calcular = function calcula (){
   var contador = 0, n1 = 0, n2 = 0, comecoN2 = 0, quandoCalcular = 0;
   var operator = this.innerHTML;
   var primeiroOperator = "", numeroUm = "", numeroDois = "";
-  console.log(operator)
   for(var x = 0; x < tamanho; x++){
     
     if (display.charAt(x) == "+" || display.charAt(x) == "-" || display.charAt(x) == "*" || display.charAt(x) == "/"){
-      console.log("fala galera da live");
-      console.log(contador);
       if (contador == 0){
         primeiroOperator = display.charAt(x);
         contador++;
@@ -112,7 +104,6 @@ const calcular = function calcula (){
       quandoCalcular++;
     }
   }
-    console.log(primeiroOperator+"teste");
     
     if (quandoCalcular > 1){
       for (var y = 0; y < tamanho && display.charAt(y) != primeiroOperator;y++){
@@ -124,7 +115,6 @@ const calcular = function calcula (){
           
           comecoN2 = y + 2;
       }
-      console.log(numeroUm);
       for (var z = comecoN2; z < tamanho && display.charAt(z) != this.innerHTML;z++){
         if (display.charAt(z) == ","){
           numeroDois = numeroDois + "."
@@ -134,7 +124,6 @@ const calcular = function calcula (){
           
         
       }
-      console.log(numeroDois);
       if (primeiroOperator == "+"){
         n1 = parseFloat(numeroUm);
         n2 = parseFloat(numeroDois);
